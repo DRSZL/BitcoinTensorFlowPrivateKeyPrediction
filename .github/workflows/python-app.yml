@@ -16,6 +16,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      OPENSSL_CONF: openssl.cnf
 
     steps:
     - uses: actions/checkout@v3
