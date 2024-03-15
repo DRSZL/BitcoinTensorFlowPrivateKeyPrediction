@@ -7,7 +7,7 @@ import generateTxtFile
 # variables
 trainingDataLength = 1000
 seed = 1337
-file_name=f'prediction'
+file_name=f'prediction.keras'
     
 # get training data
 y_bin_f32, xUncompressed_bin_f32, xCompressed_bin_f32, xSegwit_bin_f32 = trainingDataGenerator.createTrainingData(trainingDataLength, seed)
