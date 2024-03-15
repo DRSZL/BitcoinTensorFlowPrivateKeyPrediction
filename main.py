@@ -5,7 +5,7 @@ import createModel
 import generateTxtFile
 
 # variables
-trainingDataLength = 10000
+trainingDataLength = 1000
 seed = 1337
 file_name=f'prediction'
     
