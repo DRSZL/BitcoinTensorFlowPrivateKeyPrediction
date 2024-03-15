@@ -4,7 +4,7 @@ from tensorflow.keras.models import Sequential
 
 input_dim = 160
 output_dim = 256
-epochs=1000
+epochs=100
 batch_size=512
 
 def createAndSaveModel(firstDenseDimension, hiddenDenseLayers, heightDenseLayer, file, x, y):
