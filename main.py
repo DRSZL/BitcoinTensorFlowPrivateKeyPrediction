@@ -22,4 +22,6 @@ if create_Model:
 loadModelAndWrite = True
     
 if loadModelAndWrite: 
+    print('######################')
+    print(type(xUncompressed_bin_f32))
     generateTxtFile.createTextFileFromModelPrediction(file_name, xUncompressed_bin_f32)
