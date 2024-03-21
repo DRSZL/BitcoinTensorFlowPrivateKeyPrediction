@@ -4,27 +4,27 @@ from tensorflow.keras.models import Sequential
 
 input_dim = 160
 output_dim = 256
-epochs=100
-batch_size=512
+epochs=2500
+batch_size=256
 
 def createAndSaveModel(firstDenseDimension, hiddenDenseLayers, heightDenseLayer, file, x, y):
     sequential_array = []
     
     # input layer
-    sequential_array.append(layers.Dense(firstDenseDimension, activation='relu', input_shape=(input_dim,)))
+    sequential_array.append(layers.Dense(firstDenseDimension, activation='sigmoid', input_shape=(input_dim,)))
     
     # hidden layers
     for i in range(hiddenDenseLayers):
         sequential_array.append(layers.Dense(heightDenseLayer, activation='relu'))
         
     # output layer
-    sequential_array.append(layers.Dense(output_dim, activation='relu'))
+    sequential_array.append(layers.Dense(output_dim, activation='sigmoid'))
     
     # create model
     model = Sequential(sequential_array)
      
     # compile model
-    model.compile(optimizer='adam',
+    model.compile(optimizer='adamax',
                   loss='binary_crossentropy'
                   )
                   

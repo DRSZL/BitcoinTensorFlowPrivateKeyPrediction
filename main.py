@@ -19,9 +19,7 @@ if create_Model:
     createModel.createAndSaveModel(16, 8, 8, file_name, xUncompressed_bin_f32, y_bin_f32)
 
 # flag to load and write a txt from predictions
-loadModelAndWrite = True
+loadModelAndWrite = False
     
 if loadModelAndWrite: 
-    print('######################')
-    print(type(xUncompressed_bin_f32))
     generateTxtFile.createTextFileFromModelPrediction(file_name, xUncompressed_bin_f32)
